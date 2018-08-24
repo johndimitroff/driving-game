@@ -20,14 +20,15 @@ video {
    opacity: .5;
 } */
 
-.my-canvas {
+ .my-canvas {
   position: absolute;
   top: 0;
   left: 0;
   /* z-index: 10; */
   border: 10px dotted orange;
 
-}
+} 
+
 
 /* video {
   z-index: 0;

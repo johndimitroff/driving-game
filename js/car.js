@@ -13,6 +13,7 @@ function startTimer(){
     $(".timer span").text(timer);
     if(mustang.isCrashed){
       clearInterval(timerInterval);
+      // $("video").attr("src", "https://media.giphy.com/media/5H8bRxo2JgskE/giphy.gif");
     }
   }, 1000);
 } 
@@ -61,7 +62,7 @@ Car.prototype.moveMe = function () {
 }
 
 var gameOver = {
-  x: 280,
+  x: 200,
   y: 400,
   opacity: 0,
   drawMe: function () {
@@ -77,13 +78,14 @@ var gameOver = {
 
     // fade in the text with globalAlpha
     ctx.globalAlpha = this.opacity;
-    ctx.font = "bold 120px  monospace";
+    ctx.font = "bold 100px  'Press Start 2P'";
 
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "white";
     ctx.fillText("Game Over", this.x, this.y);
 
     ctx.lineWidth = 3;
-    ctx.strokeStyle = "rebeccapurple";
+    ctx.strokeStyle =
+     "white";
     ctx.strokeText("Game Over", this.x, this.y);
 
     ctx.globalAlpha = 1;
