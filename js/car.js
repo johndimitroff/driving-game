@@ -20,23 +20,23 @@ startTimer();
 
 
 var car1Img = new Image ();
-car1Img.src = "../images/blackcar1.png";
+car1Img.src = "./images/blackcar1.png";
 var car2Img = new Image ();
-car2Img.src = "../images/oldcar.png";
+car2Img.src = "./images/oldcar.png";
 var car3Img = new Image ();
-car3Img.src = "../images/greencar.png";
+car3Img.src = "./images/greencar.png";
 var car4Img = new Image ();
-car4Img.src = "../images/silvercar1.png";
+car4Img.src = "./images/silvercar1.png";
 var car5Img = new Image ();
-car5Img.src = "../images/bluecar1.png";
+car5Img.src = "./images/bluecar1.png";
 var car6Img = new Image ();
-car6Img.src = "../images/blackcar2.png";
+car6Img.src = "./images/blackcar2.png";
 var car7Img = new Image ();
-car7Img.src = "../images/policecar.png";
+car7Img.src = "./images/policecar.png";
 var car8Img = new Image ();
-car8Img.src = "../images/schoolbus.png";
+car8Img.src = "./images/schoolbus.png";
 var car9Img = new Image ();
-car9Img.src = "../images/redcar.png";
+car9Img.src = "./images/redcar.png";
 
 function Car (img, trajectory){
   this.x = 660;
@@ -116,7 +116,7 @@ var myCanvas = document.querySelector(".my-canvas");
 var ctx = myCanvas.getContext("2d");
 
 var mustangImg = new Image();
-mustangImg.src="../images/mustang.png";
+mustangImg.src="./images/mustang.png";
 
 var mustang = {
   x: 450,
