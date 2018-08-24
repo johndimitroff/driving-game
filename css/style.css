@@ -1,0 +1,87 @@
+/* body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+} */
+
+.my-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: 10; */
+  border: 10px dotted orange;
+
+}
+
+/* video {
+  z-index: 0;
+} */
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  /* font-family: 'Permanent Marker', cursive; */
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  -webkit-animation: random 3s
+  infinite;
+    animation: random 3s infinite;
+}
+@keyframes  random {
+  15% { color: red; } 
+  30% { color: yellow; } 
+  45% { color: green; } 
+  60% { color: blue; }
+  75% { color: white; }  
+}
+
+.timer {
+  top: 0;
+  position: absolute;
+} 
+
+h1 {
+  /* visibility: hidden; */
+  font-family: 'Press Start 2P', cursive;
+  /* font-family: 'Permanent Marker', cursive; */
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  -webkit-animation: random 3s
+  infinite;
+    animation: random 3s infinite;
+}
+@keyframes  random {
+  15% { color: red; } 
+  30% { color: yellow; } 
+  45% { color: green; } 
+  60% { color: blue; }
+  75% { color: white; }  
+}
+/* .gameover {
+  top: 100;
+  position: absolute;
+}  */
+
+/* @font-face {
+  font-family:"game_over";
+  src: url("../css/fonts/game_over.ttf");
+}  */ 

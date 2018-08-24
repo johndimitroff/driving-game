@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Bungee+Outline|Faster+One|Monoton|Permanent+Marker|Press+Start+2P|Russo+One|Sigmar+One|Stalinist+One|VT323" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RACE CAR GAME</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body">
+    <canvas class="my-canvas" width="1280" height="720">
+    </canvas>
+    
+    <video poster="road1.mp4" id="bgvid" playsinline autoplay muted loop>
+    <source src="./video/road1.mp4" type="video/mp4">
+    </video>
+
+    <audio>
+      <source src="./sounds/newcarsounds3.mp3" type="audio/mp4">
+    </audio>
+
+    <div class="timer">
+      <h2>Time elapsed: <span></span>
+      </h2>
+    </div>
+
+    <!-- <div class="gameover">
+        <h1>GAME OVER
+        </h1>
+      </div> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   
+   <script src="./js/car.js"></script>
+</body>
+</html>
