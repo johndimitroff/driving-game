@@ -7,9 +7,10 @@
 // // }, false);
 // mustangEngine.play();
 
+// var mustangEngine = new Audio(".sounds/newcarsounds3.mp3");
+// loop = true;
+
 var skidding = new Audio("./sounds/skidding.mp3");
-
-
 
 var timer = 0;
 function startTimer(){
@@ -19,12 +20,10 @@ function startTimer(){
     $(".final-time span").text(timer);
     if(mustang.isCrashed){
       clearInterval(timerInterval);
-      // $("video").attr("src", "./video/drivinggameend3.mp4");
     }
   }, 1000);
 } 
 startTimer();
-
 
 var car1Img = new Image ();
 car1Img.src = "./images/blackcar1.png";
@@ -67,38 +66,6 @@ Car.prototype.moveMe = function () {
   this.width += 3;
 }
 
-// var gameOver = {
-//   x: 200,
-//   y: 400,
-//   opacity: 0,
-//   drawMe: function () {
-//     if (this.opacity < 1) {
-//       this.opacity += 0.003;
-//     }
-
-// function gameOver () {
-//   if(mustang.isCrashed){
-//     $(".gameover span");
-//   }
-// }
-
-//     // fade in the text with globalAlpha
-//     ctx.globalAlpha = this.opacity;
-//     ctx.font = "bold 100px  'Press Start 2P'";
-
-//     ctx.fillStyle = "white";
-//     ctx.fillText("Game Over", this.x, this.y);
-
-//     ctx.lineWidth = 3;
-//     ctx.strokeStyle =
-//      "white";
-//     ctx.strokeText("Game Over", this.x, this.y);
-
-//     ctx.globalAlpha = 1;
-//   }
-// }
-
-
 var car1 = new Car( car1Img, -3);
 var car2 = new Car( car2Img, 3);
 var car3 = new Car( car3Img, -3);
@@ -109,16 +76,12 @@ var car7 = new Car( car7Img, -3);
 var car8 = new Car( car8Img, 3);
 var car9 = new Car( car9Img, 3);
 
-
-
-
 function collision (car) {
   return mustang.y + mustang.height >= car.y
      &&  mustang.y <= car.y + car.height
      &&  mustang.x + mustang.width >= car.x
      &&  mustang.x <= car.x + car.width;
 }
-
 
 var myCanvas = document.querySelector(".my-canvas");
 var ctx = myCanvas.getContext("2d");
@@ -165,30 +128,18 @@ function drawScene(){
   };
 
   randomCarArray.forEach(function (oneCar){
-    // if (oneCar.y > myCanvas.height){
-    //     oneCar.y = 400;
-    //     oneCar.height = 5;
-    //     oneCar.width = 7;
-    // }
-  
     oneCar.drawMe();
-
 
     if(collision(oneCar)){
       mustang.isCrashed = true;
-      // if(!mustang.crashedGif){
-      //   mustangImg.src="https://media.giphy.com/media/ahza0v6s5pSxy/giphy.gif";
-      //   mustang.crashedGif = true;
-      // } 
-      $("video").attr("src", "./video/drivinggameend.mp4");
+  
+      $("video").attr("src", "./video/drivinggameend5.mp4");
       $("audio").attr("src", "./sounds/explosion2.mp3");
       $(".timer").hide();
       $(".final-time").css("visibility", "visible");
       $(".gameover").css("visibility", "visible");
       clearInterval(carInterval);
-      gameOver();
 
-      // clearInterval(timerInterval)
       oneCar.isCrashed = true;
     }  
     if(!oneCar.isCrashed){
@@ -200,34 +151,11 @@ function drawScene(){
     return !oneCar.isCrashed;
   })
 
-  // allCars.forEach(function (oneCar){
-    // oneCar.y +=3;
-    // if (oneCar.y > myCanvas.height){
-    //   oneCar.y = 400;
-    //   oneCar.height = 5;
-    //   oneCar.width = 7;
-    // };
-    // oneCar.height += 2;
-    // oneCar.width += 2;
-   
-// );
-
-  // if(collision(mustang, car)){
-  //   mustang.isCrashed = true;
-  //   car.isCrashed = true;
-  // }
-
-  if(mustang.isCrashed){
-    gameOver.drawMe();
-  }
-
   requestAnimationFrame(function (){
     drawScene();
   });
 }
-  if(!mustang.isCrashed){
   drawScene();
-  }
 
   document.onkeydown = function (event){
     if(mustang.isCrashed){
@@ -246,7 +174,3 @@ function drawScene(){
     }
     mustang.controlBoundaries();
   };
-
-  //--------------------------------------------------------------------------
-
-
